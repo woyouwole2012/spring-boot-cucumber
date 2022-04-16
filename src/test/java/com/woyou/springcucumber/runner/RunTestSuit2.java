@@ -1,4 +1,4 @@
-package com.woyou.springcucumber;
+package com.woyou.springcucumber.runner;
 
 import com.woyou.springcucumber.SuperRunner;
 import io.cucumber.java.After;
@@ -11,9 +11,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(plugin = {"pretty", "html:target/site/cucumber-report.html","json:target/site/cucumber-report.json"}
         ,features = {"classpath:com/woyou/springcucumber/features"}
 //        ,glue = {"testcase"}
-        ,tags = "@disable or @woyou"
+        ,tags = "not @disable and @woyou"
         ,objectFactory = SpringFactory.class)
-public class RunTestSuit extends SuperRunner {
+public class RunTestSuit2 extends SuperRunner {
 
     @Before
     public void before(){

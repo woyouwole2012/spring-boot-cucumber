@@ -9,15 +9,15 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class GetNameStepDefs{
+public class GetNameStepDefs {
 
     @BeforeStep
-    public void beforeStep(){
+    public void beforeStep() {
         System.out.println("--- before step ---");
     }
 
     @AfterStep
-    public void afterStep(){
+    public void afterStep() {
         System.out.println("--- after step ---");
     }
 
