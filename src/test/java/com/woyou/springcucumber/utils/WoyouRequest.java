@@ -7,10 +7,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-@Component
 public class WoyouRequest {
 
-    public Response DoPost(String url, Map<String, Object> headers, String jsonBody){
+    public static Response DoPost(String url, Map<String, Object> headers, String jsonBody){
          return SerenityRest
                 .given()
                 .headers(headers)
@@ -18,17 +17,23 @@ public class WoyouRequest {
                 .post(url);
     }
 
-    public Response DoPost(String url, Map<String, Object> headers){
+    public static Response DoPost(String url, Map<String, Object> headers){
         return SerenityRest
                 .given()
                 .headers(headers)
                 .post(url);
     }
 
-    public Response DoPost(String url){
+    public static Response DoPost(String url){
         return SerenityRest
                 .given()
                 .post(url);
+    }
+
+    public static Response DoGet(String url){
+        return SerenityRest
+                .given()
+                .get(url);
     }
 
 }

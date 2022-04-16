@@ -1,14 +1,3 @@
-server:
-  port: 8080
-
-
 spring:
-  datasource:
-    driver-class-name: com.mysql.jc.jdbc.Driver
-    username:
-    password:
-    url:
-
-mybatis-plus:
-  mapper-locations:
-    -
+  profiles:
+    active: test
